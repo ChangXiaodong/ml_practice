@@ -46,6 +46,7 @@ def k_means(X, n_clusters, init='k-means++', precompute_distances='auto',
 >[0, 0, 3],
 >[4, 5, 6]
 >])
+
 4.计算L2范数平方，即用欧式距离作为距离检测的标准
 5.制定训练的算法，full或elkan
 6.对并行处理，如果需要并行，调用sklearn自带的Parallel模块
