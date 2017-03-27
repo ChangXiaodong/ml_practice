@@ -13,3 +13,16 @@ eg.将图像分到三个不同类别中。
 
 2.神经网络在输出一个结果向量后，比如数字识别[0,1,0,0,0,0,0,0,0,0],经过softmax变成[0.1,0.9,0.2,0.3,0.4...]，计算交叉熵
 
+3.神经网络优化方法-减小过拟合
+
+- 滑动平均模型：shadow_variable = decay * shadow_variable + (1 - decay) * variable   
+
+  decay一般为比较接近1的数。Tensorflow中，ExponentialMovingAverage提供了num_updates来动态设定decay。decay = min(decay, (1+num_updates)/(10 + num_updates))
+
+- 指数衰减学习率
+
+- 加入正则化的损失函数
+
+  一般情况下，最有效的是增加正则化损失函数
+
+  ​
